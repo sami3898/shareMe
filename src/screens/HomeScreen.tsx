@@ -4,7 +4,6 @@ import {
     Text,
     StyleSheet,
     SafeAreaView,
-    TouchableOpacity,
     Pressable,
 } from "react-native";
 import React, { useEffect, useState } from "react";
@@ -13,10 +12,8 @@ import { Feather } from "@expo/vector-icons";
 import { hp, wp } from "../utils/ResponsiveLayout";
 import { StatusBar } from "expo-status-bar";
 import { Easing } from "react-native-reanimated";
-import { AnimatePresence, MotiView } from "moti";
-import * as DocumentPicker from "expo-document-picker";
+import { MotiView } from "moti";
 import PickerModal from "../components/PickerModal";
-import { ImagePickerResult } from "expo-image-picker";
 import { uploadFileApi } from "../utils/ApiHelper";
 import Loader from "../components/Loader";
 import { UploadResType, fileType } from "../utils/types";
@@ -37,9 +34,7 @@ const HomeScreen = () => {
         let res = await uploadFileApi(file.uri, file.name);
         if (res) {
             setFileUploadRes(res);
-            // setIsLoading(false);
         }
-        console.log(res);
     };
 
 
@@ -97,7 +92,6 @@ const HomeScreen = () => {
                                     type: "timing",
                                     duration: 2000,
                                     easing: Easing.out(Easing.ease),
-                                    // delay: index * 1000,
                                     loop: true,
                                     repeatReverse: false,
                                 }}
@@ -189,10 +183,7 @@ const styles = StyleSheet.create({
         marginLeft: wp(8),
     },
     noteContainer: {
-        // marginHorizontal: wp(26),
-        // backgroundColor: 'rgba(86,123,228,0.3)',
         backgroundColor: "rgba(255,255,255,0.05)",
-        // width: DEVICE_WIDTH - wp(54),
         borderRadius: 4,
         paddingVertical: 6,
         paddingHorizontal: 10,
@@ -237,7 +228,6 @@ const styles = StyleSheet.create({
         bottom: hp(50),
         justifyContent: "center",
         alignItems: "center",
-        // backgroundColor: "red"
     },
     fileName: {
         textAlign: "center",

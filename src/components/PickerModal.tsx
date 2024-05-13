@@ -1,6 +1,6 @@
 //@ts-nocheck
-import { View, Text, Modal, StyleSheet, Pressable } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
+import React from 'react'
 import { hp, wp } from '../utils/ResponsiveLayout'
 import { COLORS, FONTS } from '../utils/Constant'
 import { Feather } from '@expo/vector-icons'
@@ -46,12 +46,8 @@ const PickerModal = (props: PickerModalProps) => {
             file = await DocumentPicker.getDocumentAsync()
             file = {name: file.assets[0].name, size: file.assets[0].size, type: file.assets[0].mimeType, uri: file.assets[0].uri}
         }
-
-
         onPressCancel()
         onSelectItem(file)
-        
-        
     }
 
 
@@ -80,7 +76,6 @@ const PickerModal = (props: PickerModalProps) => {
                         onPress={() => openPicker(i)}
                     >
                         <Feather 
-                            //@ts-ignore
                             name={e.icon}
                             size={wp(26)}
                             color={COLORS.BLUE_COLOR}

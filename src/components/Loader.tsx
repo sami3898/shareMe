@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { View, Text, Modal, StyleSheet, SafeAreaView } from 'react-native'
+import { View, Text, Modal, StyleSheet } from 'react-native'
 import React, { useRef, useState } from 'react'
 import { MotiText, MotiView } from 'moti'
 import { Easing } from 'react-native-reanimated'
@@ -33,7 +33,6 @@ const Loader = (props: LoaderProps) => {
         visible={isVisible}
         animationType='slide'
     >
-        {/* <StatusBar backgroundColor={COLORS.BLUE_COLOR} /> */}
         <View style={styles.container}>
             <LottieView 
                 source={require('../../assets/loader.json')}
@@ -98,7 +97,6 @@ const Loader = (props: LoaderProps) => {
                     }}
                     ref={copyAnimeRef}
                     onAnimationFinish={() => {
-                        // copyAnimeRef.current?.reset();
                         copyAnimeRef.current?.reset();
                         setIsCopy(false)
                     }}
