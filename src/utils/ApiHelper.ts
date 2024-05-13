@@ -19,7 +19,7 @@ export const uploadFileApi = async(fileUri: any, fileName: string) => {
         },
         headers: {
           accept: "application/json",
-          Authorization: "Bearer 42e89640-d684-4f57-9c3e-3d2b28d79a93",
+          Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
           "Content-Type": "multipart/form-data",
         },
         
