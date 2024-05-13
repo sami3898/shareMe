@@ -66,7 +66,7 @@ const PickerModal = (props: PickerModalProps) => {
         exit={{opacity: 0, translateY: 150}}
         transition={{
             type: 'timing',
-            duration: 200,
+            duration: 150,
 
         }}
     >
