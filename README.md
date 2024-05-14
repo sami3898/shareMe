@@ -2,6 +2,9 @@
 
 Share Me is a React Native Expo application designed to facilitate file sharing. It allows users to upload files to a server and generate shareable download links. The app utilizes the File.io API for file uploads and incorporates animations using React Native Moti and Lottie Animation for loading animations.
 
+![ShareME](https://github.com/sami3898/shareMe/assets/32996863/9a2b2543-7c15-4fa1-9059-0979e326e1c2)
+
+
 ## Features
 
 - 📁 Upload images, videos, or files up to 2 GB in size.
