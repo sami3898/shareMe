@@ -8,7 +8,7 @@ Share Me is a React Native Expo application designed to facilitate file sharing.
 ## Features
 
 - 📁 Upload images, videos, or files up to 2 GB in size.
-- 📲 Copy or share download links directly from the app.
+- 📲 Copy and share download links directly from the app.
 
 ## How to Run the App
 
